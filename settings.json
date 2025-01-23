@@ -1,1 +1,4 @@
-gitignore test2
+{
+  "token": "None",
+  "users": ["userid"]
+}
