@@ -10,13 +10,13 @@ def save(data):
 
 def load():
     if not os.path.exists("settings.json"):
-        raise NoFile
+        return "NoFile"
     try:
         with open("settings.json", "r", encoding="utf-8") as f:
             data = json.load(f)
         return data
     except (json.JSONDecodeError, Exception):
-        raise OtherError
+        raise 'OtherError"
 
 
 def start():
@@ -24,7 +24,6 @@ def start():
 	token = input('Enter bot token: ')
 	cfg['token']=token
 	save(cfg)
-	
 
 if __name__ == '__main__':
     start()
